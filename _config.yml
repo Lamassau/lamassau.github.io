@@ -1,1 +1,13 @@
-theme: jekyll-theme-minimal
+# Site settings
+title: Lamassau Organization
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Awesome Organization that represent Iraqi hackers who aim to fix their country
+  bugs one bug at a time. and help the world see a better side of it.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://lamassau.github.io" # the base hostname & protocol for your site
+twitter_username:
+github_username:  Lamassau
+
+# Build settings
+markdown: kramdown
