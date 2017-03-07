@@ -1,21 +1,33 @@
-<!DOCTYPE HTML>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-    {% include /head.html %}
-    <body>
-        <div id="wrapper">
-        {% include /header.html %}
+  <head>
+    <title>{{ page.title }}</title>
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+  
+  </head>
 
-            <!-- Main -->
-            <div id="main">
-                {{ content }}
 
-            </div>
-            {% include /footer.html %}
-		</div>
-	</body>
+  <body>
+    <nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/blog">Blog</a></li>
+</ul>
+    </nav>
+<div class="container">
+
+  {{ content }}
+
+</div>
+  
+  <footer>
+   <ul>
+   <li><a href="mailto:info@lamassau.com">email</a></li>
+   <li><a href="https://github.com/lamassau">github.com/lamassau</a></li>
+   </ul>
+  </footer>
+  </body>
+
 </html>

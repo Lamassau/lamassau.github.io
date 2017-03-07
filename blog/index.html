@@ -1,46 +1,12 @@
 ---
 layout: default
+title: Lamassay's Blog
 ---
+<h1>{{ page.title }}</h1>
+<ul class="posts">
 
-<section id="one" >
-    <div class="container">
-        {% for post in site.posts limit:1 %}
-            <article>
-                <header>
-                    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-                </header>
-                <section class="post-content">
-                    {{ post.excerpt }}
-                </section>
-                <section class="special">
-                    <ul class="actions">
-                        <li><a href="{{ site.baseurl }}{{ post.url }}" class="button special">Read More</a></li>
-                    </ul>
-                </section>
-            </article>
-        {% endfor %}
-    </div>
-</section>
-<section>
-    <div class="container">
-        <div class="features">
-        {% for post in site.posts offset:1 %}
-            <article>
-                <section class="excerpt">
-                <header>
-                    <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-                </header>
-                
-                    {{ post.content | truncatewords: 30 }}
-                </section>
-                <footer>
-                    <ul class="actions">
-                        <li><a href="{{ site.baseurl }}{{ post.url }}" class="button">Read More</a></li>
-                    </ul>
-                </footer>
-                <div class="clear"></div>
-            </article>
-        {% endfor %}
-        </div>
-    </div>
-</section>
+  {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+  {% endfor %}
+    
+</ul>
